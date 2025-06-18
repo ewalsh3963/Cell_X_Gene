@@ -5,9 +5,11 @@ This repository contains code for analyzing and visualizing single-cell gene exp
 ## 📦 Features
 
 - Load and explore `.h5ad` (AnnData) formatted single-cell datasets
-- Subset by cell type, condition, or gene expression
-- Generate UMAP and PCA plots for visualizing clusters
-- Plot gene expression distributions across clusters
+- Filter doublet and low-quality cells from analysis
+- (Optional) integrate multiple datasets from different
+- Run low-dimensional transformation of data (normalization, PCA, UMAP, clustering)
+- Run cell type annotation using differential expression and gene set enrichment analysis
+- Create html markdown report of data 
 - Export filtered datasets and summary statistics
 
 ## 🧪 Technologies Used
