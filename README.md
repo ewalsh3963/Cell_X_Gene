@@ -26,3 +26,29 @@ This repository contains code for analyzing and visualizing single-cell gene exp
    ```bash
    git clone https://github.com/ewalsh3963/Cell_X_Gene.git
    cd Cell_X_Gene
+
+2. **Set up a virtual environment (recommended):**
+```
+python -m venv venv
+source venv/bin/activate  # or venv\Scripts\activate on Windows
+```
+
+3. **Install dependencies:**
+```
+pip install -r requirements.txt
+```
+5. **Run the analysis**
+```
+python3 /home/ewalsh/Cell_X_Gene/main.py download -s TEST \
+-id 856c1b98-5727-49da-bf0f-151bdb8cb056 \
+-org "Homo sapiens"
+
+python3 /home/ewalsh/Cell_X_Gene/main.py lowD -s TEST
+
+python3 /home/ewalsh/Cell_X_Gene/main.py GSEA -s TEST \
+-tissues Retina \
+-species "Homo sapiens" \
+-db_species "Human"
+
+python3 /home/ewalsh/Cell_X_Gene/main.py Report -s TEST
+```
