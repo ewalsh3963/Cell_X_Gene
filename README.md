@@ -39,16 +39,20 @@ pip install -r requirements.txt
 ```
 5. **Run the analysis**
 ```
+## Download the data from Cell X Gene and run QAQC 
 python3 /home/ewalsh/Cell_X_Gene/main.py download -s TEST \
 -id 856c1b98-5727-49da-bf0f-151bdb8cb056 \
 -org "Homo sapiens"
 
+## Run Normalization, PCA, UMAP, and clustering
 python3 /home/ewalsh/Cell_X_Gene/main.py lowD -s TEST
 
+## Run cell type annotation via gene set enrichment analysis
 python3 /home/ewalsh/Cell_X_Gene/main.py GSEA -s TEST \
 -tissues Retina \
 -species "Homo sapiens" \
 -db_species "Human"
 
+## Create markdown report
 python3 /home/ewalsh/Cell_X_Gene/main.py Report -s TEST
 ```
